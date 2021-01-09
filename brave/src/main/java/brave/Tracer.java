@@ -197,7 +197,7 @@ public class Tracer {
    */
   public Span newChild(TraceContext parent) {
     if (parent == null) throw new NullPointerException("parent == null");
-    return _toSpan(decorateContext(parent, parent.parentId() == null ? 0 : parent.parentId(), parent.spanId()));
+    return _toSpan(decorateContext(parent, parent.spanId(), 0L));
   }
 
   TraceContext newRootContext(int flags) {

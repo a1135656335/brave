@@ -22,7 +22,6 @@
   </parent>
 
   <artifactId>brave</artifactId>
-  <version>5.9.0.xzzh</version>
   <packaging>jar</packaging>
   <name>Brave</name>
   <description>Brave: Core Libary</description>
