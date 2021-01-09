@@ -33,6 +33,7 @@ import brave.sampler.SamplerFunction;
 import java.io.Closeable;
 import java.util.Collections;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 import static brave.internal.InternalPropagation.FLAG_LOCAL_ROOT;
@@ -525,7 +526,10 @@ public class Tracer {
     if (samplerFunction == null) throw new NullPointerException("samplerFunction == null");
     if (arg == null) throw new NullPointerException("arg == null");
     TraceContext parent = currentTraceContext.get();
-    if (parent != null) return decorateContext(parent, parent.spanId(), 0L);
+    if (parent != null) {
+      if (parent.parentId() != null) return decorateContext(parent, parent.parentId(), parent.spanId());
+      return decorateContext(parent, 0L, parent.spanId());
+    }
 
     Boolean sampled = samplerFunction.trySample(arg);
     SamplingFlags flags = sampled != null ? (sampled ? SAMPLED : NOT_SAMPLED) : EMPTY;

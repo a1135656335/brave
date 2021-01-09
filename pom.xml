@@ -161,7 +161,7 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>brave</artifactId>
-        <version>${project.version}</version>
+        <version>5.9.0.xzzh</version>
       </dependency>
       <dependency>
         <groupId>${project.groupId}</groupId>
@@ -634,52 +634,52 @@
         </executions>
       </plugin>
 
-      <plugin>
-        <groupId>com.mycila</groupId>
-        <artifactId>license-maven-plugin</artifactId>
-        <version>${license-maven-plugin.version}</version>
-        <configuration>
-          <header>${main.basedir}/src/etc/header.txt</header>
-          <mapping>
-            <!-- Don't use javadoc style as this makes code formatters break it by adding tags! -->
-            <java>SLASHSTAR_STYLE</java>
-          </mapping>
-          <excludes>
-            <exclude>.travis.yml</exclude>
-            <exclude>.editorconfig</exclude>
-            <exclude>.gitattributes</exclude>
-            <exclude>.gitignore</exclude>
-            <exclude>.mvn/**</exclude>
-            <exclude>mvnw*</exclude>
-            <exclude>etc/header.txt</exclude>
-            <exclude>**/.idea/**</exclude>
-            <exclude>**/.editorconfig</exclude>
-            <exclude>**/log4j2.properties</exclude>
-            <exclude>LICENSE</exclude>
-            <exclude>**/*.md</exclude>
-            <exclude>**/*.bnd</exclude>
-            <exclude>**/com.alibaba.dubbo.rpc.Filter</exclude>
-            <exclude>src/test/resources/**</exclude>
-            <exclude>src/test/proto/**</exclude>
-          </excludes>
-          <strictCheck>true</strictCheck>
-        </configuration>
-        <dependencies>
-          <dependency>
-            <groupId>com.mycila</groupId>
-            <artifactId>license-maven-plugin-git</artifactId>
-            <version>${license-maven-plugin.version}</version>
-          </dependency>
-        </dependencies>
-        <executions>
-          <execution>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <phase>compile</phase>
-          </execution>
-        </executions>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.mycila</groupId>-->
+<!--        <artifactId>license-maven-plugin</artifactId>-->
+<!--        <version>${license-maven-plugin.version}</version>-->
+<!--        <configuration>-->
+<!--          <header>${main.basedir}/src/etc/header.txt</header>-->
+<!--          <mapping>-->
+<!--            &lt;!&ndash; Don't use javadoc style as this makes code formatters break it by adding tags! &ndash;&gt;-->
+<!--            <java>SLASHSTAR_STYLE</java>-->
+<!--          </mapping>-->
+<!--          <excludes>-->
+<!--            <exclude>.travis.yml</exclude>-->
+<!--            <exclude>.editorconfig</exclude>-->
+<!--            <exclude>.gitattributes</exclude>-->
+<!--            <exclude>.gitignore</exclude>-->
+<!--            <exclude>.mvn/**</exclude>-->
+<!--            <exclude>mvnw*</exclude>-->
+<!--            <exclude>etc/header.txt</exclude>-->
+<!--            <exclude>**/.idea/**</exclude>-->
+<!--            <exclude>**/.editorconfig</exclude>-->
+<!--            <exclude>**/log4j2.properties</exclude>-->
+<!--            <exclude>LICENSE</exclude>-->
+<!--            <exclude>**/*.md</exclude>-->
+<!--            <exclude>**/*.bnd</exclude>-->
+<!--            <exclude>**/com.alibaba.dubbo.rpc.Filter</exclude>-->
+<!--            <exclude>src/test/resources/**</exclude>-->
+<!--            <exclude>src/test/proto/**</exclude>-->
+<!--          </excludes>-->
+<!--          <strictCheck>true</strictCheck>-->
+<!--        </configuration>-->
+<!--        <dependencies>-->
+<!--          <dependency>-->
+<!--            <groupId>com.mycila</groupId>-->
+<!--            <artifactId>license-maven-plugin-git</artifactId>-->
+<!--            <version>${license-maven-plugin.version}</version>-->
+<!--          </dependency>-->
+<!--        </dependencies>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>check</goal>-->
+<!--            </goals>-->
+<!--            <phase>compile</phase>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 

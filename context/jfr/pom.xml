@@ -39,6 +39,7 @@
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration combine.self="override">
           <target>${main.java.version}</target>
+          <source>${main.java.version}</source>
           <compilerArgs>
             <arg>--add-modules</arg>
             <arg>jdk.jfr</arg>
